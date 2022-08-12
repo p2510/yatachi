@@ -5,7 +5,7 @@
     <div v-if="$fetchState.pending" class=" flex justify-center my-8 md:my-12sm:my-16">
          <Loading   />
     </div>
-    <p v-else-if="$fetchState.error">Nous avons rencontré une erreur, vous pouvez actualiser  :(</p>
+    <p  v-else-if="$fetchState.error" class="py-2 bg-gray-800 text-white">Nous avons rencontré une erreur, vous pouvez actualiser  :(</p>
     <div v-else>
       <div v-if="showData">
             <h1 class="text-gray-900 text-center font-bold text-md sm:text-3xl md:text-5xl pb-6">Mon blog</h1>
@@ -55,7 +55,7 @@ export default {
   },
   async fetch() {
       this.data = await fetch(
-        'https://z53upa14.directus.app/items/articles?sort=sort,-date_created'
+        'https://z53upa14.directus.app/items/Article?sort=sort,-date_created'
       ).then(res =>res.json()).catch(err=>{return err})
    
         if (this.data.data.length>0) {

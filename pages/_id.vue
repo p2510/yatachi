@@ -61,7 +61,7 @@ export default {
   },
   async fetch() {
       this.data = await fetch(
-        `https://z53upa14.directus.app/items/articles/${this.$route.params.id}`
+        `https://z53upa14.directus.app/items/Article/${this.$route.params.id}`
       ).then(res => res.json()).catch(err=>{return err})
     },
 
