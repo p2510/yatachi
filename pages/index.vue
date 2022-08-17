@@ -123,6 +123,7 @@
               <div class="flex  flex-col sm:flex-row justify-center sm:gap-x-4 gap-y-4 ">
                     <ExempleProject  name="Changepro " description="Changepro est une structure que j'ai placé dans le deuxième semestre de l'année 2022 . J'avais un peu assez de refaire les mêmes choses et de devolir écrire du code pour juste produire les mêmes résultats . je voulais donc m'éssayer à d'autres choses , un peu entreprendre. Si vous aimez bien le risque et l'aventure alors chouette . " link="https://changepro.ma" />
                     <ExempleProject  name="Cavaliero" description="Cavaliero comme le titre du rappeur français du booba ou en encore B2O  ☺ .  Non , je fais pas du rap , mais plutôt j'aime bien la nourriture alors j'ai décidé de me lancer dans la restauration avec mon frère . N'hésitez surtout pas à passer une commande , restaurant ivoirien situé à Bonoua une ville dans le sud de la Côte d'ivoire . " link='https://cavaliero.netlify.app'  />
+                    <ExempleProject  name="Derap" description="Derap est une organisation qui permet de mettre à la lumière les talents de musique ivoirienne en particulier le rap ivoire . Cette organisation organise des séances freestyles et des concours pour permettre de dénicher des talents bien cacher dans l'ombre . Ce projet a vu le jour en 2022 et sera  un avantage à la musique ivoirenne. " link='https://derap.netlify.app'  />
               </div>
 
             </div>
