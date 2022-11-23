@@ -1,5 +1,6 @@
 <template>
   <section class="text-gray-600 body-font">
+   
   <div class="container px-5 py-24 mx-auto">
     <div class="flex flex-col text-center w-full mb-20">
       <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Retrouvez les instants de yatachi </h1>
@@ -8,17 +9,14 @@
     <div v-if="$fetchState.pending" class=" flex justify-center my-8 md:my-12sm:my-16">
          <Loading />
     </div>
-    <div v-else class="flex flex-wrap -m-4">
-      <div class="lg:w-1/3 sm:w-1/2 p-4" v-for="(item, index) in data.data" :key="index" >
-        <div class="flex relative">
-          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" :src="link_img+item.img">
-          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">{{item.title}}</h2>
-            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">{{item.subtitle}}</h1>
-            <p class="leading-relaxed">{{item.description}}</p>
-          </div>
+    <div v-else class="grid grid-cols-6 gap-4  -m-4">
+    <div v-for="(item, index) in data.data" :key="index" class="col-span-full md:col-span-3 lg:col-span-2 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+        <img class="rounded-t-lg" :src="link_img+item.img" :alt="item.title" />
+        <div class="p-5">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"><strong class="text-blue-600 ">{{item.title}}</strong> / {{item.subtitle}}</h5>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{item.description}}</p>
         </div>
-      </div>
+    </div>
 
     </div>
   </div>

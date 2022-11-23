@@ -1,7 +1,7 @@
 <template>
   <main>
     <div class="home">
-          <h1 class="text-center font-bold pt-6 pb-4  text-2xl sm:text-5xl md:text-7xl">Développeur full stack , épistémophile</h1>
+          <h1 class="text-center font-bold pt-6 pb-4  text-xl sm:text-3xl md:text-5xl">Développeur full stack , épistémophile</h1>
           <figcaption>
           <div class="flex justify-center">
               <legend class="pt-2 pb-2 text-md sm:text-2xl md:text-3xl" >mon regard à chaque bout de projet terminé</legend>
@@ -119,13 +119,16 @@
   <!--example project -->
   <section class="example">
             <h2 class="pt-2 pb-4 sm:pb-8 text-center font-bold text-lg sm:text-xl md:text-2xl lg:text-4xl ">Quelques projets récents </h2>
-            <div class="container mx-auto px-4 sm:px-6 ">
-              <div class="flex  flex-col sm:flex-row justify-center sm:gap-x-4 gap-y-4 ">
-                    <ExempleProject  name="Changepro " description="Changepro est une structure que j'ai placé dans le deuxième semestre de l'année 2022 . J'avais un peu assez de refaire les mêmes choses et de devolir écrire du code pour juste produire les mêmes résultats . je voulais donc m'éssayer à d'autres choses , un peu entreprendre. Si vous aimez bien le risque et l'aventure alors chouette . " link="https://changepro.ma" />
-                    <ExempleProject  name="Cavaliero" description="Cavaliero comme le titre du rappeur français du booba ou en encore B2O  ☺ .  Non , je fais pas du rap , mais plutôt j'aime bien la nourriture alors j'ai décidé de me lancer dans la restauration avec mon frère . N'hésitez surtout pas à passer une commande , restaurant ivoirien situé à Bonoua une ville dans le sud de la Côte d'ivoire . " link='https://cavaliero.netlify.app'  />
-                    <ExempleProject  name="Derap" description="Derap est une organisation qui permet de mettre à la lumière les talents de musique ivoirienne en particulier le rap ivoire . Cette organisation organise des séances freestyles et des concours pour permettre de dénicher des talents bien cacher dans l'ombre . Ce projet a vu le jour en 2022 et sera  un avantage à la musique ivoirenne. " link='https://derap.netlify.app'  />
+            <div v-if="$fetchState.pending" class=" flex justify-center my-8 md:my-12sm:my-16">
+                <Loading />
+            </div>
+            <p  v-else-if="$fetchState.error" class="py-2 bg-gray-800 text-white">Nous avons rencontré une erreur, vous pouvez actualiser  :(</p>
+            <div v-else class="container mx-auto px-4 sm:px-6 " >
+              <div v-if="showData" class="grid grid-cols-4 lg:grid-cols-3  justify-center sm:gap-x-4 gap-y-4 ">
+                    
+                    <ExempleProject v-for="(item,index) in data.data " :key="index" data-aos="zoom-in" data-aos-duration="1000" class="col-span-full md:col-span-2 lg:col-span-1"  :name="item.title" :description="item.description " :link="item.link" />
               </div>
-
+              <Nodata v-else />
             </div>
   </section>
   <!-- testimonials -->
@@ -150,13 +153,33 @@
 </template>
 
 <script>
-
+import AOS from 'aos';
 import ExempleProject  from "@/components/ExempleProject.vue";
+import Nodata from "@/components/Nodata.vue";
+import 'aos/dist/aos.css'; 
+
 
 export default {
-  layout:'default-page',
   name:'IndexName',
-  components:{ExempleProject},
+  components:{ExempleProject,Nodata },
+  layout:'default-page',
+  data() {
+    return {
+        data:[],
+        showData:null
+    }
+  },
+  async fetch() {
+      this.data = await fetch(
+        'https://z53upa14.directus.app/items/Project?sort=sort,-date_created'
+      ).then(res =>res.json()).catch(err=>{return console.log(err)})
+   
+        if (this.data.data.length>0) {
+            this.showData=true
+        } else {
+            this.showData=false
+        }  
+    },
   head: {
     title: 'Bienvenue sur la page de yatachi code , le développeur fou ...',
     meta: [
@@ -173,7 +196,11 @@ export default {
       { name: 'http-equiv',content:'no-cache'},
     ],
     
+  },
+  mounted(){
+    AOS.init();
   }
+
   
 
 }
