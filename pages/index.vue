@@ -3,6 +3,39 @@ import AppBanner from "../components/shared/AppBanner.vue";
 import Button from "../components/reusable/Button.vue";
 export default {
   scrollToTop: true,
+  head() {
+    return {
+      title: "Yatachi code - Bienvenue ",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "Bienvenue chez Yatachi coce , le développeur web full stack qui vous permet de matérialiser votre projet web rapidement .",
+        },
+        {
+          hid: "og:image",
+          name: "og:image",
+          content: "http://yatachi-code.org/images/web-project-1.png",
+        },
+        {
+          hid: "og:image",
+          name: "og:image",
+          content: "http://yatachi-code.org/images/web-project-2.png",
+        },
+        {
+          hid: "og:image",
+          name: "og:image",
+          content: "http://yatachi-code.org/images/web-project-3.png",
+        },
+        {
+          hid: "og:image",
+          name: "og:image",
+          content: "http://yatachi-code/images/ui-project-1.png",
+        },
+      ],
+    };
+  },
   components: { AppBanner, Button },
 };
 </script>

@@ -3,6 +3,19 @@ import feather from "feather-icons";
 
 export default {
   scrollToTop: true,
+  head() {
+    return {
+      title: "Yatachi code -Contact ",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "Vous avez un projet et vous souhaitez vous faire accompagner par quelqu'un ?  Vous pouvez désormais contacter Yatachi code",
+        },
+      ],
+    };
+  },
   data: () => {
     return {
       contacts: [

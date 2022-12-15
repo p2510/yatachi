@@ -14,7 +14,12 @@ export default {
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" },
+      {
+        hid: "description",
+        name: "description",
+        content:
+          "Yatachi code est un développeur web qui a trouve la voie de sa passion assez rapidement et qui partage son code tous les jours.",
+      },
       { name: "format-detection", content: "telephone=no" },
     ],
     link: [{ rel: "icon", type: "image/x-png", href: "/favicon.png" }],
@@ -37,14 +42,46 @@ export default {
     "@nuxtjs/tailwindcss",
     "@nuxtjs/color-mode",
   ],
-
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: [
+    "@nuxtjs/sitemap",
+  ],
+  sitemap: {
+    hostname: "https://yatachi-code.org",
+    gzip: true,
+    route: ["/about", "/projects", "/contact"],
+    sitemaps: [
+      {
+        path: "/sitemap-about.xml",
+        routes: ["/about"],
+        gzip: true,
+        priority: 0.9,
+      },
+      {
+        path: "/sitemap-contact.xml",
+        routes: ["/contact"],
+        gzip: true,
+        priority: 0.7,
+      },
+      {
+        path: "/sitemap-index.xml",
+        routes: ["/"],
+        gzip: true,
+        priority: 1.0,
+      },
+      {
+        path: "/projects/sitemap-index.xml",
+        routes: ["/projects"],
+        gzip: true,
+        priority: 0.8,
+      },
+    ],
+  },
   vue: {
     config: {
       productionTip: false,
-      devtools: true
-    }
+      devtools: true,
+    },
   },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
