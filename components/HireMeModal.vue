@@ -1,18 +1,46 @@
 <script>
 import feather from "feather-icons";
 import Button from "./reusable/Button.vue";
+import emailjs from "@emailjs/browser";
+
 export default {
   props: ["showModal", "modal", "categories"],
   components: { Button },
-  data: () => {
+  data() {
     return {
-      // @todo
+      form: {
+        name: "",
+        email: "",
+        category: "",
+        message: "",
+      },
+      isSend: false,
     };
   },
   mounted() {
     feather.replace();
   },
-  methods: {},
+  methods: {
+    sendEmail() {
+      emailjs
+        .send(
+          "service_1ujxufi",
+          "template_jofb03l",
+          this.form,
+          "U47Yl_oFLMbDIS_5l"
+        )
+        .then(
+          (res) => {
+            if (res.status === 200) {
+              this.isSend = true;
+            }
+          },
+          (error) => {
+            console.log("FAILED...", error.text);
+          }
+        );
+    },
+  },
 };
 </script>
 
@@ -65,8 +93,9 @@ export default {
                 "
               >
                 <h5 class="text-primary-dark dark:text-primary-light text-xl">
-                 Vous avez un  projet d'application web/mobile ?
+                  Vous avez un projet d'application web/mobile ?
                 </h5>
+
                 <button
                   class="px-4 text-primary-dark dark:text-primary-light"
                   @click="showModal()"
@@ -74,13 +103,27 @@ export default {
                   <i data-feather="x" class="w-8 sm:w-12"></i>
                 </button>
               </div>
+              <div v-if="isSend" class="w-full my-4 flex justify-center">
+                <span
+                  class="
+                    bg-green-600 bg-opacity-70
+                    dark:bg-opacity-50
+                    p-2
+                    sm:p-4
+                    text-center
+                    font-semibold
+                    text-md text-white
+                    rounded-lg
+                    tracking-wide
+                    w-full
+                  "
+                >
+                  Votre message a été envoyé avec succès
+                </span>
+              </div>
               <div class="modal-body p-5 w-full h-full">
                 <form
-                  @submit="
-                    (e) => {
-                      e.preventDefault;
-                    }
-                  "
+                  @submit.prevent="sendEmail"
                   class="max-w-xl m-4 text-left"
                 >
                   <div class="mt-0">
@@ -104,6 +147,7 @@ export default {
                       required=""
                       placeholder="Votre nom"
                       aria-label="Name"
+                      v-model="form.name"
                     />
                   </div>
                   <div class="mt-6">
@@ -123,10 +167,11 @@ export default {
                       "
                       id="email"
                       name="email"
-                      type="text"
+                      type="email"
                       required=""
                       placeholder="Votre email"
                       aria-label="Email"
+                      v-model="form.email"
                     />
                   </div>
                   <div class="mt-6">
@@ -149,11 +194,12 @@ export default {
                       type="text"
                       required=""
                       aria-label="Project Category"
+                      v-model="form.category"
                     >
                       <option
                         v-for="category in categories"
                         :key="category.id"
-                        :value="category.value"
+                        :value="category.name"
                       >
                         {{ category.name }}
                       </option>
@@ -180,7 +226,8 @@ export default {
                       cols="14"
                       rows="6"
                       aria-label="Details"
-                      placeholder="description de votre prpjet"
+                      placeholder="description de votre projet"
+                      v-model="form.message"
                     ></textarea>
                   </div>
 
@@ -205,29 +252,7 @@ export default {
                   </div>
                 </form>
               </div>
-              <div
-                class="modal-footer mt-2 sm:mt-0 py-5 px-8 border0-t text-right"
-              >
-                <Button
-                  title="Fermer"
-                  class="
-                    px-4
-                    sm:px-6
-                    py-2
-                    bg-gray-600
-                    text-primary-light
-                    hover:bg-ternary-dark
-                    dark:bg-gray-200
-                    dark:text-secondary-dark
-                    dark:hover:bg-primary-light
-                    rounded-md
-                    focus:ring-1 focus:ring-indigo-900
-                    duration-500
-                  "
-                  @click="showModal()"
-                  aria-label="Close Hire Me Modal"
-                />
-              </div>
+
             </div>
           </div>
         </transition>

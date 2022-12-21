@@ -43,7 +43,7 @@ export const state = () => ({
         },
         {
           id: uuidv4(),
-          title: "Website",
+          title: "site web",
           details: "https://company.com",
         },
         {
@@ -259,7 +259,7 @@ export const state = () => ({
         },
         {
           id: uuidv4(),
-          title: "Website",
+          title: "site web",
           details: "https://bethelofficina.ma",
         },
       ],
@@ -301,122 +301,7 @@ export const state = () => ({
         },
       ],
     },
-    {
-      id: "260d1271-f1f2-4bc9-a5eb-05a89c8cccdy",
-      title: "Sizix team",
-      category: "Application web",
-      img: "images/ui-project-1.png",
-      publishDate: "Nov 04, 2021",
-      tag: "UI / Frontend",
-      clientTitle: "Détails client",
-      objectivesTitle: "Objectif",
-      objectivesDetails:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.",
-      techTitle: "Outils & Technologies",
-      detailsTitle: "Challenge",
-      socialTitle: "Compte sociaux",
-      projectImages: [
-        {
-          id: uuidv4(),
-          title: "Project Management UI",
-          img: "../images/mobile-project-1.jpg",
-        },
-        {
-          id: uuidv4(),
-          title: "Project Management UI",
-          img: "../images/web-project-2.jpg",
-        },
-        {
-          id: uuidv4(),
-          title: "Project Management UI",
-          img: "../images/mobile-project-2.jpg",
-        },
-      ],
-      companyInfos: [
-        {
-          id: uuidv4(),
-          title: "Name",
-          details: "Company Ltd",
-        },
-        {
-          id: uuidv4(),
-          title: "Services",
-          details: "UI Design & Frontend Development",
-        },
-        {
-          id: uuidv4(),
-          title: "Website",
-          details: "https://company.com",
-        },
-        {
-          id: uuidv4(),
-          title: "Phone",
-          details: "555 8888 888",
-        },
-      ],
-      technologies: [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Nuxt.js",
-        "TailwindCSS",
-        "AdobeXD",
-      ],
-      projectDetails: [
-        {
-          id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
-        },
-        {
-          id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?",
-        },
-        {
-          id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?",
-        },
-        {
-          id: uuidv4(),
-          details:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
-        },
-      ],
-      socialSharings: [
-        {
-          id: uuidv4(),
-          name: "Twitter",
-          icon: "twitter",
-          url: "https://twitter.com/realstoman",
-        },
-        {
-          id: uuidv4(),
-          name: "Instagram",
-          icon: "instagram",
-          url: "https://instagram.com/realstoman",
-        },
-        {
-          id: uuidv4(),
-          name: "Facebook",
-          icon: "facebook",
-          url: "https://facebook.com/",
-        },
-        {
-          id: uuidv4(),
-          name: "LinkedIn",
-          icon: "linkedin",
-          url: "https://linkedin.com/",
-        },
-        {
-          id: uuidv4(),
-          name: "Youtube",
-          icon: "youtube",
-          url: "https://www.youtube.com/c/StomanStudio",
-        },
-      ],
-    },
+
     {
       id: "260d1271-f1f2-4bc9-a5eb-05a89c8ccc99",
       title: "Elvirah shop",
@@ -434,8 +319,8 @@ export const state = () => ({
       projectImages: [
         {
           id: uuidv4(),
-          title: "Cloud Storage Platform",
-          img: "../images/SubImages/ui1/img1.png",
+          title: "Design de elvirah shop",
+          img: "../SubImages/ui1/img1.png",
         },
       ],
       companyInfos: [
@@ -459,6 +344,84 @@ export const state = () => ({
         },
       ],
       socialSharings: [],
+    },
+    {
+      id: "260d1271-f1f2-4bc9-a5eb-05a89c8cccdyg",
+      title: "Sizix team",
+      category: "Application web",
+      img: "images/web-project-4.png",
+      publishDate: "Décembre , 2022",
+      tag: "Développement web / mobile ",
+      clientTitle: "Détails client",
+      objectivesTitle: "Objectif",
+      objectivesDetails:
+        "Sizix team est un projet open source qui consiste à développer des outils web pour faciliter le quotidien et le dev . J'alimente ce projet depuis un moment .",
+      techTitle: "Outils & Technologies",
+      detailsTitle: "Challenge",
+      socialTitle: "Compte sociaux",
+      projectImages: [
+        {
+          id: uuidv4(),
+          title: "Page d'acceuil ",
+          img: "../subImages/web4/img1.png",
+        },
+        {
+          id: uuidv4(),
+          title: "page  info",
+          img: "../subImages/web4/img2.png",
+        },
+        {
+          id: uuidv4(),
+          title: "Autre page ",
+          img: "../subImages/web4/img3.png",
+        },
+      ],
+      companyInfos: [
+        {
+          id: uuidv4(),
+          title: "Name",
+          details: "Sizix team ",
+        },
+        {
+          id: uuidv4(),
+          title: "Services",
+          details: "Développement d'outils web ",
+        },
+        {
+          id: uuidv4(),
+          title: "site web ",
+          details: "https://sizix.netlify.app",
+        },
+      ],
+      technologies: [
+        "web front",
+        "back end ",
+      ],
+      projectDetails: [
+        {
+          id: uuidv4(),
+          details:
+            "Sizix Team est une équipê de jeunes développeurs passioné qui tentent de mettre leurs savoir au service du monde en offrant des outils et technologies IT. Son objectif principal est de produire des outils et infrastructures pour permettre aux personnes de mieux gérer leurs quotidiens et aux développeurs de s'alimenter . Ses solutions peuvent être de plusieurs formes à savoir des applications web , applications mobile ... ",
+        },
+        {
+          id: uuidv4(),
+          details:
+            "L'idée est de créer un environnement ou tout le monde pourra se concentrer sur ses objetifs pricipaux sans avoir à se soucier des problèmes de la société .",
+        },
+        {
+          id: uuidv4(),
+          details:
+            "Sizix d'abord pour représenter le nom de nos six (6) x . Chaque x réprensente une qualité au sein de notre équipe en occurrence l'innovation , la complicité , le travail , la technologie , la confiance et la solution . Toutes ces différentes quatiltés au seins d'une équipe visant un but commun et dont le projet appartient au utilisateurs forment une corporation .",
+        },
+      ],
+      socialSharings: [
+        {
+          id: uuidv4(),
+          name: "GitHub",
+          icon: "github",
+          url: "https://github.com/Sizix-corporation",
+        },
+      ],
     },
     {
       id: "260d1271-f1f2-4bc9-a5eb-05a89c8cccdm",
@@ -504,7 +467,7 @@ export const state = () => ({
         },
         {
           id: uuidv4(),
-          title: "Website",
+          title: "site web",
           details: "https://cavaliero.netlify.app",
         },
         {

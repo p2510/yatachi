@@ -23,7 +23,7 @@ export default {
           {
             id: 4,
             title: "Kabul Mobile App UI",
-            img: require("@/static/images/mobile-project-2.jpg"),
+            img: require("@/static/images/web-project-4.png"),
           },
         ],
       },

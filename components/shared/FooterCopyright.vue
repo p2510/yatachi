@@ -37,7 +37,7 @@ export default {
       >
       . Developpé par 
       <a
-        href="https://stoman.me"
+        href="https://yatachi-code.org"
         target="__blank"
         class="
           font-general-medium

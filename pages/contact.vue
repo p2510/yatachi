@@ -26,7 +26,7 @@ export default {
         },
         {
           id: 2,
-          name: "poupoinaka03@domain.com",
+          name: "poupoinaka03@gmail.com",
           icon: "mail",
         },
         {

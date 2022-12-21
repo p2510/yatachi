@@ -36,7 +36,7 @@ export default {
           >4+</span
         >
         <span class="block text-md text-ternary-dark dark:text-ternary-light"
-          >D'expérience</span
+          >D'expériences</span
         >
       </div>
 
