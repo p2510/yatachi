@@ -125,7 +125,7 @@ export const state = () => ({
       clientTitle: "Détails client",
       objectivesTitle: "Objectif",
       objectivesDetails:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.",
+        "Cette entreprise existe depuis pas mal d'années et n'étant convaincu de l'interface utilisateurs ils ont souhaité aménager un tout petit peu le design.",
       techTitle: "Outils & Technologies",
       detailsTitle: "Challenge",
       socialTitle: "Compte sociaux",
@@ -221,6 +221,67 @@ export const state = () => ({
       ],
     },
     {
+      id: "260d1271-f1f2-4bc9-a5eb-05a89c8cccdw",
+      title: "Goder game",
+      category: "Application web",
+      img: "images/web-project-5.png",
+      publishDate: "Janvier , 2023",
+      tag: "UI / Frontend",
+      clientTitle: "Détails client",
+      objectivesTitle: "Objectif",
+      objectivesDetails:
+        "Goder est un jeu qui consiste à lancer un dé et déviner le resultat attendu . C'était un jeu passionant autrefois alors j'ai décidé de le coder en format web .",
+      techTitle: "Outils & Technologies",
+      detailsTitle: "Challenge",
+      socialTitle: "Compte sociaux",
+      projectImages: [
+        {
+          id: uuidv4(),
+          title: "page d'acceuil onlyonecard ",
+          img: "../subImages/web5/img1.png",
+        },
+      ],
+      companyInfos: [
+        {
+          id: uuidv4(),
+          title: "Nom",
+          details: "Goder game",
+        },
+        {
+          id: uuidv4(),
+          title: "Services",
+          details: "UI Design & Intégration web",
+        },
+        {
+          id: uuidv4(),
+          title: "Url",
+          details: "https://goder-game.netlify.app",
+        },
+      ],
+      technologies: [
+        "Nuxt",
+        "TypeScript",
+
+      ],
+      projectDetails: [
+        {
+          id: uuidv4(),
+          details:
+            "cette expérience à coder ce mini jeu m'a rappelé les methodes et quelques timing du code . J'avoue que c'était une expérience formidable au point j'ai inivté des amis à jouer .",
+        },
+
+      ],
+      socialSharings: [
+        {
+          id: uuidv4(),
+          name: "GitHub",
+          icon: "github",
+          url: "https://github.com/p2510/game_goder",
+        },
+
+      ],
+    },
+    {
       id: "260d1271-f1f2-4bc9-a5eb-05a89c8cccdy",
       title: "Bethel officina",
       category: "Application web",
@@ -260,7 +321,7 @@ export const state = () => ({
         {
           id: uuidv4(),
           title: "site web",
-          details: "https://bethelofficina.ma",
+          details: "https://testebethel.netlify.app",
         },
       ],
       technologies: ["Nuxt", "TypeScript", "Directus", "VueX", "TailwindCSS"],
