@@ -221,6 +221,82 @@ export const state = () => ({
       ],
     },
     {
+      id: "260d1271-f1f2-4bc9-a5eb-05a89c8cccdm",
+      title: "Complexe horticole d'Agadir , Maroc",
+      category: "Application web",
+      img: "images/web-project-6.png",
+      publishDate: "Fevrier, 2023",
+      tag: "Développement",
+      clientTitle: "Détails client",
+      objectivesTitle: "Objectif",
+      objectivesDetails:
+        "Le complexe horticole d'agadir a souhaité implémanté leurs application web afin d'améliorer l'image . J'ai été contacté par la société Prestavert pour le développement de ce projet .",
+      techTitle: "Outils & Technologies",
+      detailsTitle: "Challenge",
+      socialTitle: "Compte sociaux",
+      projectImages: [
+        {
+          id: uuidv4(),
+          title: "page d'acceuil Cha-Agadir",
+          img: "../subImages/web6/img1.png",
+        },
+        {
+          id: uuidv4(),
+          title: "Page de formations",
+          img: "../subImages/web6/img2.png",
+        },
+        {
+          id: uuidv4(),
+          title: "Page d'évènements",
+          img: "../subImages/web6/img3.png",
+        },
+      ],
+      companyInfos: [
+        {
+          id: uuidv4(),
+          title: "Nom",
+          details: "Complexe horticole d'Agadir",
+        },
+        {
+          id: uuidv4(),
+          title: "Services",
+          details: "Dévéloppement web complet",
+        },
+        {
+          id: uuidv4(),
+          title: "Url",
+          details: "http://prestavert.com",
+        },
+      ],
+      technologies: [
+        "Laravel",
+        "Bootstrap",
+        "Jquery",
+        
+      ],
+      projectDetails: [
+        {
+          id: uuidv4(),
+          details:
+            "Le Complexe Horticole d’Agadir (CHA) a ouvert ses portes en 1980 pour la formation d’ingénieurs, de techniciens et de docteurs spécialisés en Horticulture, Protection des Plantes et Architecture de Paysage.",
+        },
+        {
+          id: uuidv4(),
+          details:
+            "Depuis sa création au cœur de la 1ère région exportatrice de primeurs Souss Massa, il a contribué au développement du secteur horticole par la formation de lauréats marocains et étrangers, particulièrement de l’Afrique sub-sahariens.",
+        },
+        {
+          id: uuidv4(),
+          details:
+            "Le CHA est un campus situé à Ait Melloul sur une superficie de 79 ha, entre la zone agrumicole « Taroudant » et celle primeuriste « Chtouka Ait Baha ». C’est un établissement public d’enseignement et de recherche agricole, orienté sur les sciences agronomiques et les métiers verts.",
+        },
+ 
+      ],
+      socialSharings: [
+
+      ],
+    },
+    {
       id: "260d1271-f1f2-4bc9-a5eb-05a89c8cccdw",
       title: "Goder game",
       category: "Application web",
@@ -611,7 +687,7 @@ export const state = () => ({
   aboutMe: [
     {
       id: uuidv4(),
-      bio: "Bienvenue , Je suis yatachi . Ravi de vous rencontrer Dépuis le début de mon apprentissage , j'avais pour objectif final de mettre les compétences aux services de la communauté . Il faut savoir que le metier est un profil assez crucial dans notre société actuel d'autant plus qu'il y a énormement à gagner en se positionnant sur le web . Passionné , ambitieux , rêveur tous ces attributs m'ont mené tout droit à intégrer ce corps . J'aime prendre des projets en main , réaliser des applications concrètes , c'est avec conviction et assurance que je vous invite à explorer l'élégance. On n'y va !!!!",
+      bio: "Bienvenue , Je suis POUPOIN AKA LAURENT. Ravi de vous rencontrer Dépuis le début de mon apprentissage , j'avais pour objectif final de mettre les compétences aux services de la communauté . Il faut savoir que le metier est un profil assez crucial dans notre société actuel d'autant plus qu'il y a énormement à gagner en se positionnant sur le web . Passionné , ambitieux , rêveur tous ces attributs m'ont mené tout droit à intégrer ce corps . J'aime prendre des projets en main , réaliser des applications concrètes , c'est avec conviction et assurance que je vous invite à explorer l'élégance. On n'y va !!!!",
     },
     {
       id: uuidv4(),

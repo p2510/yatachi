@@ -43,7 +43,7 @@ export default {
           uppercase
         "
       >
-        Salut je suis YATACHI
+        Salut je suis POUPOIN AKA 
       </h1>
       <p
         class="
@@ -58,7 +58,7 @@ export default {
           text-gray-400
         "
       >
-        Un développeur full-stack épistémophile
+        Un développeur Laravel/PHP
       </p>
 
     </div>
